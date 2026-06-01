@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — Lapidary</title>
-<meta name="description" content="How Lapidary collects, uses, and protects your information.">
+<title>Terms of Service — Lapidary</title>
+<meta name="description" content="The terms governing your use of Lapidary.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -40,8 +40,7 @@
   a.inline { color: var(--terracotta); text-decoration: underline; }
 
   .review {
-    background: rgba(139,58,42,0.07);
-    border-left: 3px solid var(--terracotta);
+    background: rgba(139,58,42,0.07); border-left: 3px solid var(--terracotta);
     padding: 14px 18px; margin: 18px 0; border-radius: 0 6px 6px 0;
     font-size: 16px; color: var(--ink-soft);
   }
@@ -68,85 +67,66 @@
 </header>
 
 <main class="wrap doc">
-  <h1>Privacy Policy</h1>
+  <h1>Terms of Service</h1>
   <p class="updated">Last updated: 1 June 2026</p>
 
   <div class="review">
-    <strong>⚑ REVIEW BEFORE PUBLISHING.</strong> This is a working draft grounded in how Lapidary actually operates, not finished legal advice. Read every section, confirm each statement matches your real practices, fill the bracketed blanks, and consider having it reviewed by a lawyer or a policy generator (Termly, iubenda) for your jurisdiction. Each highlighted box marks a decision only you can make. Delete these boxes before publishing.
+    <strong>⚑ REVIEW BEFORE PUBLISHING.</strong> A working draft, not finished legal advice. Apps that offer auto-renewing subscriptions must meet specific App Store requirements (clear terms, a functional privacy policy link, an EULA). If you do not supply your own EULA, Apple's standard Licensed Application End User License Agreement applies by default — many small apps simply rely on Apple's standard EULA and a Terms page like this. Read every section, fill the blanks, and consider professional review. Delete these boxes before publishing.
   </div>
 
-  <p>This Privacy Policy explains how Lapidary ("Lapidary," "we," "us") collects, uses, and protects information when you use the Lapidary iOS application (the "App"). By using the App, you agree to the practices described here.</p>
+  <p>These Terms of Service ("Terms") govern your use of the Lapidary iOS application (the "App"). By downloading or using the App, you agree to these Terms. If you do not agree, do not use the App.</p>
 
-  <h2>Information We Collect</h2>
-  <p>We collect only what the App needs to function:</p>
+  <h2>The Service</h2>
+  <p>Lapidary uses artificial intelligence to produce transcriptions and translations of Latin inscriptions, manuscripts, and related material from images you provide. The App offers two reading modes — Reader and Scholar — and an independent verification step intended to assess the reliability of a reading.</p>
+
+  <h2>Accuracy &amp; Scholarly Use — Important</h2>
+  <p><strong>Lapidary's readings are produced by AI and may contain errors.</strong> Transcriptions, translations, expanded abbreviations, datings, and historical context are best-effort interpretations, not authoritative determinations. Verification grades indicate estimated confidence; they are not guarantees of correctness. <strong>You should independently verify any reading against primary sources and qualified expertise before relying on it for academic, professional, financial, legal, or publication purposes.</strong> Lapidary is a research aid, not a substitute for scholarly judgment.</p>
+
+  <h2>Accounts</h2>
+  <p>You sign in using Sign in with Apple. You are responsible for activity under your account. You must provide accurate information and are responsible for maintaining the security of the device and Apple ID you use to access the App.</p>
+
+  <h2>Credits, Subscriptions &amp; Purchases</h2>
   <ul>
-    <li><strong>Account identifiers.</strong> When you sign in with Apple, we receive a stable Apple user identifier and, if you choose to share it, your name and email address. Apple may provide a private relay email rather than your real address; we store whatever Apple sends.</li>
-    <li><strong>Images you submit.</strong> Photographs you upload for reading are stored so the App can process them and so you can revisit your reading history.</li>
-    <li><strong>Image metadata.</strong> Photographs may contain embedded metadata such as the date and time of capture and GPS location. Where present, we may extract this to record the provenance of a reading (for example, when and where an inscription was photographed).</li>
-    <li><strong>Readings and usage records.</strong> The transcriptions, translations, and verification results produced for you, along with your credit balance and purchase history.</li>
+    <li>Lapidary operates on a credit system. A Reader reading costs 1 credit; a Scholar reading costs 4 credits.</li>
+    <li>New users receive a limited number of complimentary credits to try the service.</li>
+    <li>A monthly subscription grants a recurring allotment of credits. Unused credits roll over while described as non-expiring in the App.</li>
+    <li>Additional credits may be purchased as one-time consumable packs.</li>
+    <li>Subscriptions auto-renew at the stated price unless cancelled at least 24 hours before the end of the current period. You manage and cancel subscriptions through your Apple ID settings.</li>
+    <li>Purchases are processed by Apple and are subject to Apple's terms. Refunds are handled by Apple in accordance with App Store policy.</li>
   </ul>
-
   <div class="review">
-    <strong>⚑ Confirm the metadata claim.</strong> The draft says you <em>may</em> extract capture date/time and GPS. Your EXIF→PDF feature is on the backlog, not yet shipped. Apple requires the policy to match reality at submission. If EXIF extraction is NOT live when you submit, either soften this to "may in future" or remove it until the feature ships — but note Apple's privacy nutrition labels must also reflect location use if you ever do collect it.
+    <strong>⚑ Confirm the credit terms match the App exactly.</strong> These mirror the current model (1 Reader / 4 Scholar, 7 free, $9.99→40 rolling over uncapped, two consumable packs). If any number changes before launch, update here too — Apple cross-checks Terms against in-app behavior and metadata.
   </div>
 
-  <h2>How Your Images and Text Are Processed</h2>
-  <p>To produce a reading, the App sends your uploaded image and related text to <strong>Anthropic</strong>, the provider of the Claude AI models that power Lapidary's transcription and translation. This processing is necessary to deliver the core service.</p>
-  <p>Lapidary accesses these models through the <strong>Anthropic API</strong>, which is governed by Anthropic's Commercial Terms of Service. Under those terms, the content you submit through the API is <strong>not used to train Anthropic's AI models.</strong> Anthropic may retain and process this content for a limited period to operate the service and to monitor for misuse, and it does not sell your content. You can read the terms that govern this processing directly: <a class="inline" href="https://www.anthropic.com/legal/commercial-terms" target="_blank" rel="noopener">Anthropic Commercial Terms of Service</a> and <a class="inline" href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic Privacy Policy</a>.</p>
+  <h2>Acceptable Use</h2>
+  <p>You agree not to misuse the App, including by uploading content you have no right to use, attempting to disrupt or reverse-engineer the service, or using it to violate any law. You retain ownership of the images you upload; you grant us the limited right to process them solely to provide the service to you.</p>
 
-  <h2>Will My Photos or Text Be Used to Train AI?</h2>
-  <p><strong>No.</strong> Anthropic distinguishes between its consumer products (such as the Claude.ai chat app, which may use personal-account conversations for training) and its API, which Lapidary uses. API access is covered by the Commercial Terms of Service, under which submitted content is not used for model training. In short: using Lapidary does not feed your images or readings into AI training.</p>
+  <h2>Intellectual Property</h2>
+  <p>The App, its design, and its underlying software are owned by Lapidary and its licensors. These Terms grant you a limited, personal, non-transferable, revocable license to use the App. Readings produced for you are yours to use, subject to the accuracy disclaimers above.</p>
+
+  <h2>Disclaimer of Warranties</h2>
+  <p>The App is provided "as is" and "as available," without warranties of any kind, whether express or implied, including fitness for a particular purpose and accuracy. We do not warrant that the App will be uninterrupted, error-free, or that any reading will be correct or complete.</p>
+
+  <h2>Limitation of Liability</h2>
+  <p>To the maximum extent permitted by law, Lapidary will not be liable for any indirect, incidental, special, consequential, or punitive damages, or for any loss arising from your reliance on a reading. Our total liability for any claim relating to the App will not exceed the amount you paid for the App in the twelve months preceding the claim.</p>
   <div class="review">
-    <strong>⚑ Verify against your own account's terms before publishing.</strong> The statements above reflect Anthropic's Commercial Terms of Service as summarized in mid-2026. Confirm the current no-training language is present in the Commercial Terms tied to your API key, and re-check periodically — Anthropic has revised its terms before. Note this is "not used for training," which is distinct from "never stored": standard API terms still allow limited retention for service operation and abuse monitoring (full Zero Data Retention is a separate enterprise arrangement). State only what your current terms support.
+    <strong>⚑ Liability &amp; governing law are jurisdiction-sensitive.</strong> The enforceability of warranty disclaimers and liability caps varies by country and by consumer-protection law. If you have meaningful revenue or international users, have this section reviewed. Also add a governing-law / jurisdiction clause (below).
   </div>
 
-  <h2>How We Use Information</h2>
-  <ul>
-    <li>To authenticate you and maintain your account.</li>
-    <li>To process images into readings and store your reading history.</li>
-    <li>To manage credits, subscriptions, and purchases.</li>
-    <li>To maintain, secure, and improve the App's reliability.</li>
-    <li>To respond to your support requests.</li>
-  </ul>
-
-  <h2>Payments and Subscriptions</h2>
-  <p>Purchases and subscriptions are processed by <strong>Apple</strong> through the App Store and managed on our side through <strong>RevenueCat</strong>, our subscription-infrastructure provider. We do not receive or store your payment card details; Apple handles payment. RevenueCat processes purchase events so we can grant the credits you buy. See Apple's and RevenueCat's privacy policies for their practices.</p>
-
-  <h2>Data Storage and Retention</h2>
-  <p>Account data and readings are stored on infrastructure operated by our hosting and storage providers <span class="review" style="display:inline; padding:2px 8px; margin:0;"><strong>[name them: e.g. Fly.io, Neon, Cloudflare R2]</strong></span> located in <strong>[region]</strong>. We retain your data for as long as your account is active. When you delete your account, we delete your associated data as described below.</p>
+  <h2>Governing Law</h2>
+  <p>These Terms are governed by the laws of <strong>[your state / country]</strong>, without regard to conflict-of-law principles.</p>
   <div class="review">
-    <strong>⚑ Fill in providers &amp; region.</strong> Your stack is Fly.io (iad / US-East), Neon Postgres (US-East), Cloudflare R2. Decide how specifically you want to name sub-processors — naming them is good transparency and increasingly expected. State the data region (US).
+    <strong>⚑ Choose governing law.</strong> Typically your state of residence or business formation. Fill this in.
   </div>
 
-  <h2>Account Deletion</h2>
-  <p>You can delete your account at any time from within the App. Deleting your account permanently removes your user record, your readings, your stored images, and your credit-transaction and purchase records from our systems. <strong>This is irreversible, and any unused credits are forfeited.</strong> Some records may persist briefly in encrypted backups before being overwritten on our normal backup cycle.</p>
-  <div class="review">
-    <strong>⚑ Confirm the backup claim.</strong> Only state that backups are overwritten on a cycle if that is actually true of your Neon/R2 setup. If you have no separate backups, remove that sentence. The in-app deletion already does a cascading hard delete + R2 cleanup, which is accurate.
-  </div>
+  <h2>Apple Standard EULA</h2>
+  <p>Your use of the App is also subject to Apple's standard Licensed Application End User License Agreement, available at <a class="inline" href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">apple.com/legal/internet-services/itunes/dev/stdeula</a>, except where these Terms provide otherwise.</p>
 
-  <h2>Sharing</h2>
-  <p>We do not sell your personal information. We share data only with the service providers described above (Apple, Anthropic, RevenueCat, and our hosting/storage providers), strictly to operate the App, and where required by law.</p>
-
-  <h2>Children</h2>
-  <p>Lapidary is not directed to children under 13, and we do not knowingly collect personal information from them.</p>
-  <div class="review">
-    <strong>⚑ Set your age threshold.</strong> Match this to the age rating you choose in App Store Connect and to applicable law (13 under US COPPA; 16 in parts of the EU). Adjust the number accordingly.
-  </div>
-
-  <h2>Your Rights</h2>
-  <p>Depending on where you live, you may have rights to access, correct, or delete your personal information, or to object to or restrict certain processing. You can exercise the core of these rights directly through in-app account deletion, or by contacting us at the address below.</p>
-  <div class="review">
-    <strong>⚑ Jurisdiction-specific rights.</strong> If you expect EU/UK (GDPR) or California (CCPA/CPRA) users, those laws require specific disclosures and request mechanisms beyond this paragraph. A generator or lawyer can supply the exact clauses. Decide your coverage based on where you'll distribute.
-  </div>
-
-  <h2>Changes to This Policy</h2>
-  <p>We may update this policy from time to time. Material changes will be reflected by updating the date at the top of this page and, where appropriate, through an in-app notice.</p>
+  <h2>Changes</h2>
+  <p>We may update these Terms from time to time. Continued use of the App after changes take effect constitutes acceptance of the revised Terms.</p>
 
   <h2>Contact</h2>
-  <p>Questions about this policy or your data: <a class="inline" href="mailto:dave@developerd.com">dave@developerd.com</a>.</p>
-  <div class="review">
-    <strong>⚑ Contact &amp; legal entity.</strong> Decide whether to list a personal email, a dedicated support address, or a business entity/address. Some jurisdictions require a legal entity name and contact for a data controller.
-  </div>
+  <p>Questions about these Terms: <a class="inline" href="mailto:dave@developerd.com">dave@developerd.com</a>.</p>
 
 </main>
 
