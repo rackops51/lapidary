@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lapidary — Read the Stone</title>
+<meta name="description" content="Lapidary reads and translates Latin inscriptions and medieval manuscripts from a single photograph. A scholarly instrument for epigraphers, paleographers, collectors, and the curious.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --parchment: #f0e9dc;
+    --parchment-deep: #e7dcc8;
+    --ink: #1f1a14;
+    --ink-soft: #463d30;
+    --ink-light: #7a6e5b;
+    --terracotta: #8b3a2a;
+    --gold: #a08456;
+    --line: #c9bca0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--parchment);
+    color: var(--ink);
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 19px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(160,132,86,0.05) 0%, transparent 40%),
+      radial-gradient(circle at 85% 60%, rgba(139,58,42,0.04) 0%, transparent 45%);
+    min-height: 100vh;
+  }
+
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 28px; }
+
+  /* ── Header / nav ───────────────────────────── */
+  header {
+    border-bottom: 1px solid var(--line);
+    background: rgba(240,233,220,0.85);
+    backdrop-filter: blur(6px);
+    position: sticky; top: 0; z-index: 10;
+  }
+  .nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 0;
+  }
+  .brand {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 26px; }
+  .nav-links a {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--terracotta); }
+
+  /* ── Hero ───────────────────────────────────── */
+  .hero { padding: 92px 0 64px; text-align: center; }
+  .hero .eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 26px;
+  }
+  .hero h1 {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: clamp(40px, 8vw, 68px);
+    line-height: 1.05;
+    color: var(--ink);
+    margin-bottom: 26px;
+  }
+  .hero .lede {
+    font-size: 22px;
+    color: var(--ink-soft);
+    max-width: 560px;
+    margin: 0 auto;
+    font-style: italic;
+  }
+
+  .rule {
+    width: 64px; height: 1px;
+    background: var(--gold);
+    margin: 56px auto;
+    position: relative;
+  }
+  .rule::before {
+    content: "❦";
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--parchment);
+    color: var(--gold);
+    padding: 0 12px;
+    font-size: 15px;
+  }
+
+  /* ── Sections ───────────────────────────────── */
+  section { padding: 8px 0; }
+  h2 {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 22px;
+  }
+  .section-body p { margin-bottom: 20px; color: var(--ink-soft); }
+  .section-body p:last-child { margin-bottom: 0; }
+  strong { color: var(--ink); font-weight: 600; }
+
+  /* ── Two tiers ──────────────────────────────── */
+  .tiers { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 12px; }
+  .tier {
+    background: var(--parchment-deep);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 26px 24px;
+  }
+  .tier h3 {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .tier .tier-sub {
+    font-style: italic;
+    font-size: 15px;
+    color: var(--ink-light);
+    margin-bottom: 14px;
+  }
+  .tier p { font-size: 16px; color: var(--ink-soft); line-height: 1.55; }
+
+  /* ── Steps ──────────────────────────────────── */
+  .steps { list-style: none; counter-reset: step; }
+  .steps li {
+    position: relative;
+    padding-left: 52px;
+    margin-bottom: 24px;
+    color: var(--ink-soft);
+  }
+  .steps li:last-child { margin-bottom: 0; }
+  .steps li::before {
+    counter-increment: step;
+    content: counter(step, upper-roman);
+    position: absolute; left: 0; top: -2px;
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+    color: var(--gold);
+    width: 34px; text-align: center;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 2px;
+  }
+  .steps li strong { display: block; color: var(--ink); margin-bottom: 2px; }
+
+  /* ── Footer ─────────────────────────────────── */
+  footer {
+    margin-top: 80px;
+    border-top: 1px solid var(--line);
+    padding: 40px 0 56px;
+    text-align: center;
+  }
+  .footer-links { display: flex; gap: 22px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+  .footer-links a {
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--terracotta); }
+  .footer-fine { font-size: 14px; color: var(--ink-light); }
+  .footer-fine a { color: var(--ink-light); text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    body { font-size: 18px; }
+    .tiers { grid-template-columns: 1fr; }
+    .nav-links { gap: 18px; }
+    .hero { padding: 64px 0 48px; }
+  }
+
+  /* page-load reveal */
+  .reveal { opacity: 0; transform: translateY(14px); animation: rise 0.7s ease forwards; }
+  .reveal:nth-child(1) { animation-delay: 0.05s; }
+  .reveal:nth-child(2) { animation-delay: 0.15s; }
+  .reveal:nth-child(3) { animation-delay: 0.25s; }
+  @keyframes rise { to { opacity: 1; transform: translateY(0); } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="/" class="brand">Lapidary</a>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#how">How it works</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero">
+    <div class="eyebrow reveal">Latin, read from the stone</div>
+    <h1 class="reveal">Lapidary</h1>
+    <p class="lede reveal">A scholarly instrument that reads and translates Latin inscriptions and medieval manuscripts from a single photograph.</p>
+  </div>
+
+  <div class="rule"></div>
+
+  <section id="about">
+    <h2>What Lapidary Is</h2>
+    <div class="section-body">
+      <p>Photograph a stone inscription, a manuscript leaf, a coin, or a printed Latin source. Lapidary returns a structured reading: a diplomatic transcription, an English translation, expanded abbreviations, identified names, and historical context.</p>
+      <p>Every reading is built to be a <strong>transferable, citable artifact</strong> — exportable, aligned with established scholarly encoding conventions, and independently verified. Lapidary is made for epigraphers, paleographers, librarians, collectors, students, and anyone who meets Latin in the wild and wants to read it honestly.</p>
+    </div>
+  </section>
+
+  <div class="rule"></div>
+
+  <section id="tiers">
+    <h2>Two Ways to Read</h2>
+    <div class="tiers">
+      <div class="tier">
+        <h3>Reader</h3>
+        <div class="tier-sub">For clear inscriptions &amp; coins</div>
+        <p>Fast, dependable readings of legible text. Each reading carries a confidence grade so you know how much to trust it.</p>
+      </div>
+      <div class="tier">
+        <h3>Scholar</h3>
+        <div class="tier-sub">For dense paleographic work</div>
+        <p>Our most capable model, paired with an independent verifier that audits the reading and surfaces caveats — for codices, patristic manuscripts, and difficult hands.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="rule"></div>
+
+  <section id="how">
+    <h2>How It Works</h2>
+    <ol class="steps">
+      <li><strong>Photograph the text</strong>Use your camera, your photo library, or a file from your cloud storage.</li>
+      <li><strong>Choose a reading</strong>Reader for clear text, Scholar for difficult or dense material.</li>
+      <li><strong>Receive a verified reading</strong>Transcription, translation, expanded abbreviations, and context — with a confidence grade and, on Scholar, a full verification audit.</li>
+      <li><strong>Keep and cite it</strong>Export the reading and carry it into your own scholarly workflow.</li>
+    </ol>
+  </section>
+
+  <div class="rule"></div>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="section-body">
+      <p>Questions, corrections, or feedback are welcome. Write to <a href="mailto:dave@developerd.com" style="color:var(--terracotta);text-decoration:underline;">dave@developerd.com</a>.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#how">How it works</a>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/terms">Terms of Service</a>
+      <a href="mailto:dave@developerd.com">Contact</a>
+    </div>
+    <p class="footer-fine">© 2026 Lapidary. Latin readings are produced by AI and may contain errors; verify against primary sources for scholarly use.</p>
+  </div>
+</footer>
+
+</body>
+</html>
