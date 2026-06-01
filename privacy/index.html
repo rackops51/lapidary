@@ -76,27 +76,20 @@
   <h2>Information We Collect</h2>
   <p>We collect only what the App needs to function:</p>
   <ul>
-    <li><strong>Account identifiers.</strong> When you sign in with Apple, we receive a stable Apple user identifier and, if you choose to share it, your name and email address. Apple may provide a private relay email rather than your real address; we store whatever Apple sends.</li>
+    <li><strong>Account identifiers.</strong> When you sign in with Apple, we receive a stable Apple user identifier and, if you choose to share it, your name and email address. Apple may provide a private relay email rather than your real address; we store whatever Apple sends. At no time is this information ever sold or released to the public.</li>
     <li><strong>Images you submit.</strong> Photographs you upload for reading are stored so the App can process them and so you can revisit your reading history.</li>
-    <li><strong>Image metadata.</strong> Photographs may contain embedded metadata such as the date and time of capture and GPS location. Where present, we may extract this to record the provenance of a reading (for example, when and where an inscription was photographed).</li>
+    <li><strong>Image metadata.</strong> Photographs may contain embedded metadata such as the date and time of capture and GPS location. Where present, we may extract this to record the provenance of a reading (for example, when and where an inscription was photographed) to provide you, the user, with the best possible product.</li>
     <li><strong>Readings and usage records.</strong> The transcriptions, translations, and verification results produced for you, along with your credit balance and purchase history.</li>
   </ul>
 
-  <div class="review">
-    <strong>⚑ Confirm the metadata claim.</strong> The draft says you <em>may</em> extract capture date/time and GPS. Your EXIF→PDF feature is on the backlog, not yet shipped. Apple requires the policy to match reality at submission. If EXIF extraction is NOT live when you submit, either soften this to "may in future" or remove it until the feature ships — but note Apple's privacy nutrition labels must also reflect location use if you ever do collect it.
-  </div>
-
   <h2>How Your Images and Text Are Processed</h2>
   <p>To produce a reading, the App sends your uploaded image and related text to <strong>Anthropic</strong>, the provider of the Claude AI models that power Lapidary's transcription and translation. This processing is necessary to deliver the core service.</p>
-  <p>Lapidary accesses these models through the <strong>Anthropic API</strong>, which is governed by Anthropic's Commercial Terms of Service. Under those terms, the content you submit through the API is <strong>not used to train Anthropic's AI models.</strong> Anthropic may retain and process this content for a limited period to operate the service and to monitor for misuse, and it does not sell your content. You can read the terms that govern this processing directly: <a class="inline" href="https://www.anthropic.com/legal/commercial-terms" target="_blank" rel="noopener">Anthropic Commercial Terms of Service</a> and <a class="inline" href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic Privacy Policy</a>.</p>
+  <p>Lapidary accesses these models through the <strong>Anthropic API (Application Programming Interface)</strong>, which is governed by Anthropic's Commercial Terms of Service. Under those terms, the content you submit through the API is <strong>not used to train Anthropic's AI models.</strong> Anthropic may retain and process this content for a limited period to operate the service and to monitor for misuse, and it does not sell your content. You can read the terms that govern this processing directly: <a class="inline" href="https://www.anthropic.com/legal/commercial-terms" target="_blank" rel="noopener">Anthropic Commercial Terms of Service</a> and <a class="inline" href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic Privacy Policy</a>.</p>
 
   <h2>Will My Photos or Text Be Used to Train AI?</h2>
   <p><strong>No.</strong> Anthropic distinguishes between its consumer products (such as the Claude.ai chat app, which may use personal-account conversations for training) and its API, which Lapidary uses. API access is covered by the Commercial Terms of Service, under which submitted content is not used for model training. In short: using Lapidary does not feed your images or readings into AI training.</p>
-  <div class="review">
-    <strong>⚑ Verify against your own account's terms before publishing.</strong> The statements above reflect Anthropic's Commercial Terms of Service as summarized in mid-2026. Confirm the current no-training language is present in the Commercial Terms tied to your API key, and re-check periodically — Anthropic has revised its terms before. Note this is "not used for training," which is distinct from "never stored": standard API terms still allow limited retention for service operation and abuse monitoring (full Zero Data Retention is a separate enterprise arrangement). State only what your current terms support.
-  </div>
 
-  <h2>How We Use Information</h2>
+  <h2>How Your Information is Used/h2>
   <ul>
     <li>To authenticate you and maintain your account.</li>
     <li>To process images into readings and store your reading history.</li>
@@ -109,10 +102,7 @@
   <p>Purchases and subscriptions are processed by <strong>Apple</strong> through the App Store and managed on our side through <strong>RevenueCat</strong>, our subscription-infrastructure provider. We do not receive or store your payment card details; Apple handles payment. RevenueCat processes purchase events so we can grant the credits you buy. See Apple's and RevenueCat's privacy policies for their practices.</p>
 
   <h2>Data Storage and Retention</h2>
-  <p>Account data and readings are stored on infrastructure operated by our hosting and storage providers <span class="review" style="display:inline; padding:2px 8px; margin:0;"><strong>[name them: e.g. Fly.io, Neon, Cloudflare R2]</strong></span> located in <strong>[region]</strong>. We retain your data for as long as your account is active. When you delete your account, we delete your associated data as described below.</p>
-  <div class="review">
-    <strong>⚑ Fill in providers &amp; region.</strong> Your stack is Fly.io (iad / US-East), Neon Postgres (US-East), Cloudflare R2. Decide how specifically you want to name sub-processors — naming them is good transparency and increasingly expected. State the data region (US).
-  </div>
+  <p>Account data and readings are stored on infrastructure operated by our hosting and storage providers <span class="review" style="display:inline; padding:2px 8px; margin:0;"><strong>Fly.io (iad/US-East), Neon (US East), and Cloudflare R2</strong></span> located in <strong> the United States</strong>. We retain your data for as long as your account is active. When you delete your account, we delete your associated data as described below.</p>
 
   <h2>Account Deletion</h2>
   <p>You can delete your account at any time from within the App. Deleting your account permanently removes your user record, your readings, your stored images, and your credit-transaction and purchase records from our systems. <strong>This is irreversible, and any unused credits are forfeited.</strong> Some records may persist briefly in encrypted backups before being overwritten on our normal backup cycle.</p>
@@ -125,25 +115,16 @@
 
   <h2>Children</h2>
   <p>Lapidary is not directed to children under 13, and we do not knowingly collect personal information from them.</p>
-  <div class="review">
-    <strong>⚑ Set your age threshold.</strong> Match this to the age rating you choose in App Store Connect and to applicable law (13 under US COPPA; 16 in parts of the EU). Adjust the number accordingly.
-  </div>
 
   <h2>Your Rights</h2>
   <p>Depending on where you live, you may have rights to access, correct, or delete your personal information, or to object to or restrict certain processing. You can exercise the core of these rights directly through in-app account deletion, or by contacting us at the address below.</p>
-  <div class="review">
-    <strong>⚑ Jurisdiction-specific rights.</strong> If you expect EU/UK (GDPR) or California (CCPA/CPRA) users, those laws require specific disclosures and request mechanisms beyond this paragraph. A generator or lawyer can supply the exact clauses. Decide your coverage based on where you'll distribute.
-  </div>
-
+  
   <h2>Changes to This Policy</h2>
   <p>We may update this policy from time to time. Material changes will be reflected by updating the date at the top of this page and, where appropriate, through an in-app notice.</p>
 
   <h2>Contact</h2>
-  <p>Questions about this policy or your data: <a class="inline" href="mailto:dave@developerd.com">dave@developerd.com</a>.</p>
-  <div class="review">
-    <strong>⚑ Contact &amp; legal entity.</strong> Decide whether to list a personal email, a dedicated support address, or a business entity/address. Some jurisdictions require a legal entity name and contact for a data controller.
-  </div>
-
+  <p>This app is maintained by an actual human, Dave Schwind, dba DeveloperD LLC, registered in the state of Virginia, USA. Questions about this policy or your data: <a class="inline" href="mailto:dave@developerd.com">dave@developerd.com</a>.</p>
+  
 </main>
 
 <footer>
